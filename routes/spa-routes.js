@@ -1,4 +1,4 @@
-export default function(router, groot) {
+module.exports = function(router, groot) {
     //default first page
     router.get('/', (req, res) => {
         res.sendFile("public/index.html", {"root" : groot});

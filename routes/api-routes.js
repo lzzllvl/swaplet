@@ -1,7 +1,7 @@
-import Listing from '../models/Listing.js';
-import User from '../models/User.js'
+const Listing = require('../models/Listing');
+const User = require('../models/User');
 
-export default function (router) {
+module.exports = function (router) {
     //get by parameters
 
     //get all Listings

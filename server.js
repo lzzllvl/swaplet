@@ -5,7 +5,7 @@ const Promise = require("bluebird");
 
 const PORT = process.env.PORT || 8080;
 var dbhost = PORT == 8080
-           ? 'localhost/nytreact'
+           ? 'localhost/swaplet'
            : null; //'heroku_gg2l1v99:2t2kvco9jignu7emf2i58de4f1@ds161901.mlab.com:61901/heroku_gg2l1v99';
 
 //models and ODM
