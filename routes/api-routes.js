@@ -2,22 +2,25 @@ const Listing = require('../models/Listing');
 const User = require('../models/User');
 
 module.exports = function (router) {
-    //get by parameters
+    //get by parameters - GET
 
-    //get all Listings
+    //get all Listings - GET
 
-    //book a listing
+    //book a listing - PATCH
 
-    //swap a listing
+    //swap a listing - PATCH
 
-    //get all swappable listings
+    //get all swappable listings - GET
 
-    //get all sublettable listings
+    //get all sublettable listings - GET
 
-    //get all of users listings
+    //get all of users listings - GET
 
-    //edit a listing
+    //edit a listing - PATCH
 
-    //add a listing
+    //add a listing - POST
 
+    //send a message -  POST
+   
+    
 }
