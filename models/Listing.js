@@ -28,6 +28,7 @@ const ListingSchema = new Schema({
             type: String,
             required: true
         },
+
         zipCode: {
             type: Number,
             required: true
@@ -62,7 +63,7 @@ const ListingSchema = new Schema({
         type: [String]
     },
 
-    preferredSwapLocations:{
+    preferredSwapLocations: {
         type: [String]
     },
 });

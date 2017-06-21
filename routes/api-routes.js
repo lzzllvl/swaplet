@@ -22,5 +22,9 @@ module.exports = function (router) {
 
     //send a message -  POST
    
+    //delete a message -    DELETE
+
+    //delete a listing - DELETE
+
     
 }
