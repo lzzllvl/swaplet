@@ -4,13 +4,15 @@ import React, { Component } from "react";
 class DateRange extends Component {
     
     render() {
-        <DateRange
-            componentId="DateSensor"
-            appbaseField="mtime"
-            title="DatePicker"
-            numberOfMonths={2}
-            allowAllDates={true}
-        />
+        return (
+            <DateRange
+                componentId="DateSensor"
+                appbaseField="mtime"
+                title="DatePicker"
+                numberOfMonths={2}
+                allowAllDates={true}
+            />
+        )
     }
 };
 
