@@ -5,7 +5,7 @@ const Promise = require("bluebird");
 
 const PORT = process.env.PORT || 8080;
 var dbhost = PORT == 8080
-           ? 'localhost/swaplet'
+           ? 'localhost/swaplet-test'
            : null; //switch with heroku db when needed
 
 //models and ODM
