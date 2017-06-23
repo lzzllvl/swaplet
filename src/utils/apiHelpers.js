@@ -48,6 +48,10 @@ const apiHelpers = {
         return axios.post('/api/addlisting/', postData);
     },
 
+    getMessagesForUser: function(user_id) {
+        return axios.get('/userMessages/'+ user_id);
+    },
+
     sendMessage: function(fromUser, toUser, body) {
         let messagePackage = {
             fromUser: fromUser,
