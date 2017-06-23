@@ -1,4 +1,4 @@
-var React = require('react');
+import React, { Component } from "react";
 
 class ToggleList extends Component {
     render() {
@@ -16,4 +16,4 @@ class ToggleList extends Component {
     }
 };
 
-module.exports = ToggleList;
+export default ToggleList;

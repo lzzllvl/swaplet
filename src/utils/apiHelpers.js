@@ -11,12 +11,24 @@ const apiHelpers = {
         return axios.post('/api/params', paramsObject)
     },
 
-    bookAListing: function(currentListing) {
-        return axios.patch('/api/book', currentListing);
+    bookAListing: function(currentListing, datesObject) {
+        // `datesObject` needs to be of this format
+        // `{
+        //   startDate: Date, --- JavaScript Date() object
+        //   endDate: Date  
+        //  }`
+        return axios.patch('/api/book', { 
+            currentListing : currentListing,
+            dates: datesObject
+        });
     }, 
 
     getAllSwappable: function() {
-        return axios.get('api/swappable');
+        return axios.get('/api/swappable');
+    },
+    
+    getAllSublettable: function() {
+        return axios.get('/api/sublettable');
     },
 
     //TODO using passport for userID info

@@ -39,6 +39,10 @@ const ListingSchema = new Schema({
         type: Number,
         required: true,
     },
+    sublettable: {
+        type: Boolean,
+        required: true
+    },
 
     swappable: {
         type: Boolean,
