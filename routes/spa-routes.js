@@ -1,11 +1,17 @@
 module.exports = function(router, groot) {
     //default first page
     router.get('/', (req, res) => {
-        res.sendFile("public/index.html", {"root" : groot});
+        res.sendFile("/index.html", { "root" : groot });
     });
+    
     //view listings page
-
-    //user interactions page
-
+    router.get('/browse', (req, res) => {
+        res.sendFile("/browse.html", { 'root' : groot })
+    });
+    
+    //user  home/interactions page
+    router.get('/browse', (req, res) => {
+        res.sendFile("/home.html", { 'root' : groot })
+    });
     
 }
