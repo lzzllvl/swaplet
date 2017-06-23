@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-import ReactDOM from 'react-dom';
 import {
     ReactiveBase,
     DateRange,
@@ -14,7 +12,7 @@ import logo from './logo.svg';
 import './App.css';
 
 
-class Main extends Component {
+class App extends Component {
     render() {
         return (
             <div className="fullWrapper" style={{'margin':'0'}}>
@@ -97,4 +95,4 @@ class Main extends Component {
     }
 };
 
-ReactDOM.render(<Main />, document.getElementById('app'));
+export default App;
