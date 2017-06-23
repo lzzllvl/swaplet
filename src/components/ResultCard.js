@@ -23,4 +23,4 @@ class ResultCard extends Component {
     }
 };
 
-module.exports = ResultCard;
+export default ResultCard;
