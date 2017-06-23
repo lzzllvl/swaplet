@@ -1,4 +1,4 @@
-var React = require('react');
+import React, { Component } from "react";
 
 class ResultCard extends Component {
     render() {
