@@ -4,10 +4,12 @@ class RangeSlider extends Component {
     render() {
         <RangeSlider
             componentId="RangeSliderSensor"
-            appbaseField="guests"
+            appbaseField="price"
+            title="Price Range"
+            stepValue={10}
             range={{
-                "start": 0,
-                "end": 10
+                "start": 10,
+                "end": 250
             }}
         />
     }
