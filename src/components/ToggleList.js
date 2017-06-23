@@ -16,4 +16,4 @@ class ToggleList extends Component {
     }
 };
 
-module.exports = ToggleList;
+export default ToggleList;

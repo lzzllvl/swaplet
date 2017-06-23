@@ -13,4 +13,4 @@ class NumberBox extends Component {
     }
 };
 
-module.exports = NumberBox;
+export default NumberBox;

@@ -15,4 +15,4 @@ class RangeSlider extends Component {
     }
 };
 
-module.exports = RangeSlider;
+export default RangeSlider;
