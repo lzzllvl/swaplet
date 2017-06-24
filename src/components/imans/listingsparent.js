@@ -1,0 +1,11 @@
+// THIS IS THE MAIN CONTAINER THAT SHOWS THE LIST OF LISTINGS
+// FOUND ON THE HOMEPAGE
+// WILL CONTAIN LISTING CARD CHILD COMPONENTS
+<div className="container">
+	<div className="row">
+
+
+
+
+	</div>
+</div>
