@@ -1,5 +1,5 @@
 // FOOTER COMPONENT
-// NEEDS EDITS
+// NEEDS EDITS, THIS IS JUST A COPY/PASTE
 // DOES NOT NEED CHILDREN
 <footer class="footer">
     <div class="container">
