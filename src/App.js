@@ -21,12 +21,3 @@ class App extends Component {
 }
 
 export default App;
-class App extends React.Component {
-    render() {
-        return (
-          <app />
-        )
-    }
-};
-
-export default App;
