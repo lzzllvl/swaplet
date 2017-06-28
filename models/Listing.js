@@ -70,6 +70,23 @@ const ListingSchema = new Schema({
     preferredSwapLocations: {
         type: [String]
     },
+
+    specifications: [{
+        bedrooms: {
+            type: Number,
+            required: true
+        },
+        bathrooms: {
+            type: Number,
+            required: true,
+        },
+        listingType: {
+            type: String,
+            required: true
+        }
+
+    }],
+
 });
 
 //the .call() is used to context problems with the destructuring assignment
