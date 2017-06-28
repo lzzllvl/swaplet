@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@appbaseio/reactivesearch": "^0.5.23",
     "axios": "^0.16.2",
     "bcrypt": "^1.0.2",
     "bluebird": "^3.5.0",
