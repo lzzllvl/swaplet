@@ -21,6 +21,13 @@ const UserSchema = new Schema({
         required: true
     },
 
+    profileImageLink: {
+        type: String,
+    }, 
+
+    bio: {
+        type: String, 
+    }
 });
 
 module.exports = model.call(mongoose, "User", UserSchema);

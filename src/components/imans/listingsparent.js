@@ -11,6 +11,10 @@ import Listingparent from './listingchildren/listingcard';
 
 class Listingparent extends React.Component {
 
+	componentDidMount() {
+		
+	}
+
 	render() {
 		return (
 			<div className="container">

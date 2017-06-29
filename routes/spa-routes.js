@@ -10,7 +10,7 @@ module.exports = function(router, groot) {
     });
     
     //user  home/interactions page
-    router.get('/browse', (req, res) => {
+    router.get('/home', (req, res) => {
         res.sendFile("/home.html", { 'root' : groot })
     });
     
