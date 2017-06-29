@@ -71,7 +71,7 @@ const ListingSchema = new Schema({
         type: [String]
     },
 
-    specifications: [{
+    specifications: {
         bedrooms: {
             type: Number,
             required: true
@@ -85,7 +85,7 @@ const ListingSchema = new Schema({
             required: true
         }
 
-    }],
+    },
 
 });
 
