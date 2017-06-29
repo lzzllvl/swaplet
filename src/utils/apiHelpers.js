@@ -4,7 +4,7 @@ const apiHelpers = {
     //map these to the api routes 
     //will be Promise based via axios
     getAllListings: function() {
-        return axios.get('/api/getall')
+        return axios.get('/api/getall');
     },
 
     getListingsByParams: function(paramsObject) {
@@ -61,5 +61,10 @@ const apiHelpers = {
         return axios.post('/api/newMessage', messagePackage);
     }
 }
+
+// apihelpers.getAllListings().then(function(jsonData) {
+//             //do whatever with the data
+//             //change the state  of the component 
+//         });
 
 module.exports = apiHelpers;
