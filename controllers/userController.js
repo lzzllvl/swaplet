@@ -6,11 +6,10 @@ const LocalStrategy = require('passport-local').Strategy;
 const userController = {
     createUser: function(userObject) { 
         return new Promise((resolve, reject) => {
-            bcrypt.hash(userObject.password, 10).then((err, hash) => {
-                if(err) return err;
+            bcrypt.hash(userObject.password, 10).then((hash) => {
                 userObject.password = hash;
                 let newUser = new User(userObject);
-                User.save((err, result) => {
+                newUser.save((err, result) => {
                     if(err) reject(err); 
                     resolve(result);
                 });
@@ -20,7 +19,7 @@ const userController = {
 
     authenticateUser: function(email, password) {
         return new Promise((resolve, reject) => {
-            User.find({
+            User.findOne({
                 email: email
             }, (err, result) => {
                 if(err) reject(err);

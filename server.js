@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 
 const PORT = process.env.PORT || 8080;
 var dbhost = PORT == 8080
-           ? 'localhost/swaplet-test'
+           ? 'localhost/swaplet-test1'
            : null; //switch with heroku db when needed
 
 //models and ODM
@@ -47,8 +47,25 @@ app.use(passport.initialize());
 app.use(passport.session());
 //require the user controller. 
 
-
+let userController = require("./controllers/userController.js");
 
 app.use('/', router);
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}...`));
+
+
+
+//these are how to add fake users and see if they are authenticated
+// userController.createUser({
+//   firstName: "Greg",
+//   lastName: "Lee",
+//   email: "suh@dude.com", 
+//   password: "test1", 
+//   bio: "CODE CODE CODE"
+// }).then((data) => {
+//   console.log("data", data);
+// }).catch((err) => {
+//   console.log("err", err);
+// });
+
+// userController.authenticateUser("suh@dude.com", "test1");
