@@ -9,7 +9,7 @@ import Listingcard from "../listingchildren/Listingcard";
 // REACT HAS THE MAP FUNCTION IN THE RENDER TO REUSE THIS COMPONENT FOR MULTIPLE LISTINGS
 // https://facebook.github.io/react/docs/lists-and-keys.html#basic-list-component
 
-class Listing extends React.Component {
+class Listings extends React.Component {
 
 	componentDidMount() {
 		
