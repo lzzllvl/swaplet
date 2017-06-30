@@ -2,11 +2,11 @@
 
 import React from 'react';
 
-import Header from "../homechildren/Header";
+import Header from "./homechildren/Header";
 
-import Static from "../homechildren/Listing";
+import Static from "./homechildren/Static";
 
-import Listing from "../homechildren/Static";
+import Listings from "./homechildren/Listings";
 
 
 class Home extends React.Component {
