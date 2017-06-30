@@ -1,11 +1,15 @@
 import React from 'react';
 
-import Bbox from "../dateboxchildren/Bbox";
+import Pickdate from "../dateboxchildren/Pickdate";
 
 // react-dates go here
 class Datebox extends React.Component {
     render() {
-        return ;
+        return (
+        	    <div className="row">
+					<Pickdate/>
+				</div>
+        );
     }
 } 
 
