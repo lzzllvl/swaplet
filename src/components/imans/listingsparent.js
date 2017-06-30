@@ -19,7 +19,7 @@ class Listingparent extends React.Component {
 		return (
 			<div className="container">
 				<div className="row">
-					<div class="col-sm-10 col-sm-offest-1">
+					<div className="col-sm-10 col-sm-offest-1">
 
 					<Listingcard/>
 

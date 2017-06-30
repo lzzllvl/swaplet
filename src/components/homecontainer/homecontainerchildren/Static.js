@@ -2,7 +2,16 @@ import React from 'react';
 
 class Static extends React.Component {
     render() {
-        return ;
+        return (
+
+        <div className="container">
+        	<Filter/>
+        	<Roombox/>
+        	<Bathroom/>
+        	<Datebox/>
+        </div>
+
+        );
     }
 } 
 

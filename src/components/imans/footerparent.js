@@ -6,9 +6,9 @@ import React from 'react';
 class Footer extends React.Component {
 	render() {
 		return (
-			<footer class="footer">
-				<div class="container">
-					<nav class="pull-left">
+			<footer className="footer">
+				<div className="container">
+					<nav className="pull-left">
 						<ul>
 							<li>
 								<a href="http://www.creative-tim.com">
@@ -32,8 +32,8 @@ class Footer extends React.Component {
 							</li>
 						</ul>
 					</nav>
-					<div class="copyright pull-right">
-						&copy; 2016, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com" target="_blank">Creative Tim</a>
+					<div className="copyright pull-right">
+						&copy; 2016, made with <i className="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com" target="_blank">Creative Tim</a>
 					</div>
 				</div>
 			</footer>
