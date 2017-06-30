@@ -1,7 +1,7 @@
 //Import dependencies using ES6
 import React from 'react';
 
-import Listingparent from './listingchildren/listingcard';
+import Listingcard from "../listingchildren/Listingcard";
 // THIS IS THE MAIN CONTAINER THAT SHOWS THE LIST OF LISTINGS
 // FOUND ON THE HOMEPAGE
 // WILL CONTAIN LISTING CARD CHILD COMPONENTS
