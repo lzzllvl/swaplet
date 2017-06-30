@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Bbox from "../bathboxchildren/Bbox";
-
 class Bathroombox extends React.Component {
     render() {
         return  (

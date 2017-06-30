@@ -37,4 +37,5 @@ class Rightnav extends React.Component {
         );
     } 
 }
+export default Rightnav;
 

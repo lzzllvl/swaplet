@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Bbox from "../roomboxchildren/Rbox";
-
 class Roombox extends React.Component {
     render() {
         return  (

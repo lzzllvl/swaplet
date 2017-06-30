@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Listingcard from "../listingchildren/Listingcard";
-
 class Listingcard extends React.Component {
     render() {
         return (
