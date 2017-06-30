@@ -6,14 +6,14 @@ class Search extends React.Component {
 	render() {
 		return (
 			// THIS IS THE SEARCH COMPONENT
-			<div class="col-sm-4">
-				<div class="form-group label-floating">
-					<label class="control-label">With Floating Label</label>
+			<div className="col-sm-4">
+				<div className="form-group label-floating">
+					<label className="control-label">With Floating Label</label>
 					<input type="email" class="form-control"/>
 				</div>
 			</div>
 
-			);
+		);
 	}
 }
 
