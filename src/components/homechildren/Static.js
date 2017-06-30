@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Filterbox from "../staticchildren/Filterbox";
+import Filterbox from "./staticchildren/Filterbox";
 
-import Roombox from "../staticchildren/Roombox";
+import Roombox from "./staticchildren/Roombox";
 
-import Bathroombox from "../staticchildren/Bathroombox";
+import Bathroombox from "./staticchildren/Bathroombox";
 
-import Datebox from "../staticchildren/Datebox";
+import Datebox from "./staticchildren/Datebox";
 
 
 class Static extends React.Component {
@@ -16,7 +16,7 @@ class Static extends React.Component {
         <div className="container">
         	<Filterbox/>
         	<Roombox/>
-        	<Bathroom/>
+        	<Bathroombox/>
         	<Datebox/>
         </div>
 

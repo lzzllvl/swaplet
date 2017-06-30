@@ -19,7 +19,6 @@ class Headerparent extends React.Component {
       <div className="container">
 		<nav className="navbar navbar-transparent navbar-absolute">
 		    <div className="container">
-		    	<Logo/>
 		    	<Search/>
 		    	<Rightnav/>
 		    	<Switcher/>
