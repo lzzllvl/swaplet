@@ -2,6 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const Promise = require("bluebird");
+const passport = require("passport");
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 const PORT = process.env.PORT || 8080;
 var dbhost = PORT == 8080
@@ -33,6 +36,19 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static("public"));
+app.use(cookieParser());
+app.use(session({
+  secret: 'keyboard cat',
+  resave: true,
+  saveUninitialized: true
+ }));
+
+app.use(passport.initialize());
+app.use(passport.session());
+//require the user controller. 
+
+
+
 app.use('/', router);
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}...`));
