@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Highlight from 'react-highlight';
-import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from '../../../src/riet.js';
+import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from './REI/riet.js';
 
 class UserProfile extends React.Component {
   constructor(props){

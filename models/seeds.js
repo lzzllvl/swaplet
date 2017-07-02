@@ -1,4 +1,27 @@
-listing1 = {   
+const User = require('./User.js');
+const Listing = require('./Listing.js');
+const UserController = require("../controllers/userController.js")
+
+
+
+let user1 = {
+  
+  firstName: "Greg",
+  lastName: "Lee",
+  email: "suh@dude.com", 
+  password: "test1", 
+  bio: "CODE CODE CODE"
+}; 
+
+let user2 = {
+  firstName: "Kobe",
+  lastName: "Bryant",
+  email: "black@mamba.com", 
+  password: "kobebean", 
+  bio: "20 years on the Lakers, now that's paper"
+}; 
+
+let listing1 = {  
     owner: "mongo objectID",
     address: {
         streetNumber: 1,
@@ -41,7 +64,7 @@ listing1 = {
     }
 }
 
-listing2 = {   
+let listing2 = {   
     owner: "mongo objectID",
     address: {
         streetNumber: 3000,
@@ -82,4 +105,18 @@ listing2 = {
         bathrooms: 6,
         listingType: "Apt"
     }
+}
+
+
+const seedDatabase = {
+    addUser: (userObject) => {
+
+    },
+    addListingAndUpsertOwner: (ownerObject, listingObject) => {
+
+    }, 
+    addMessage: (toUserObject, fromUserObject, messageBody) => {
+        
+    }
+
 }

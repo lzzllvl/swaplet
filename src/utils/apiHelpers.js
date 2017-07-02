@@ -31,14 +31,13 @@ const apiHelpers = {
         return axios.get('/api/sublettable');
     },
 
-    //TODO using passport for userID info
     getAllUserListings: function(user_id) {
         return axios.get('/api/userlistings/'+ user_id);
     },
 
     editThisListing: function(patchData) {
-        return axios.patch('/api/editlisting', newData);
-    }, 
+        return axios.patch('/api/editlisting', patchData);
+    },
 
     addNewListing: function(newListing, user_id) {
         let postdata = {
@@ -61,10 +60,5 @@ const apiHelpers = {
         return axios.post('/api/newMessage', messagePackage);
     }
 }
-
-// apihelpers.getAllListings().then(function(jsonData) {
-//             //do whatever with the data
-//             //change the state  of the component 
-//         });
 
 module.exports = apiHelpers;
