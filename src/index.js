@@ -6,5 +6,5 @@ import UserProfile from './components/imans/UserProfileParent';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-ReactDOM.render(<UserProfile />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
