@@ -5,7 +5,7 @@ class Rightnav extends React.Component {
         return (
 
             // Add this component to the header parent, after the logoseach component
-            <div className="collapse navbar-collapse" id="navigation-example">
+            <div className="collapse navbar-collapse headerchildren" id="navigation-example">
                 <ul className="nav navbar-nav navbar-right">
                     <li>
                         <a href="../components-documentation.html" target="_blank">

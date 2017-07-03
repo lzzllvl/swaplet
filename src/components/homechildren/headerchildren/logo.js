@@ -6,8 +6,8 @@ class Logo extends React.component {
 		return (
 
 		// Add this component to the header parent first
-			<div className="navbar-header">
-			    <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+			<div className="navbar-header headerchildren">
+			    <button type="button" className="navbar-toggle header" data-toggle="collapse" data-target="#navigation-example">
 			        <span className="sr-only">Toggle navigation</span>
 			        <span className="icon-bar"></span>
 			        <span className="icon-bar"></span>
