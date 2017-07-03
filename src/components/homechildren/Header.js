@@ -14,7 +14,7 @@ class Headerparent extends React.Component {
 
     return (
 
-      <div className="container">
+      <div className="container col-sm-12">
 		<nav className="navbar navbar-transparent navbar-absolute">
 		    <div className="container">
 		    	<Search/>
