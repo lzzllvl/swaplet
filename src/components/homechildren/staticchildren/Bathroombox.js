@@ -4,7 +4,7 @@ class Bathroombox extends React.Component {
     render() {
         return  (
 
-	    <div className="row">
+	    <div className="row staticChildren">
 	    	<h4 className="rbc-title col s12 col-xs-12">Bathrooms</h4>
 			<div className="rbc-numberbox-container col s12 col-xs-12">
 			   <div className="rbc-label"></div>
