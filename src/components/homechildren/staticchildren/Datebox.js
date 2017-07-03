@@ -4,7 +4,7 @@ import React from 'react';
 class Datebox extends React.Component {
     render() {
         return (
-        	    <div className="row">
+        	    <div className="row staticChildren">
 				</div>
         );
     }

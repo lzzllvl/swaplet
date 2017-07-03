@@ -5,8 +5,6 @@ import Search from './headerchildren/search';
 
 import Rightnav from './headerchildren/rightnav';
 
-import Switcher from './headerchildren/switcher';
-
 // THIS IS THE HEADER PARENT COMPONENT
 // ADD THE HEADER CHILDREN BELOW
 
@@ -21,7 +19,6 @@ class Headerparent extends React.Component {
 		    <div className="container">
 		    	<Search/>
 		    	<Rightnav/>
-		    	<Switcher/>
 		    </div>
 		</nav>
       </div>
