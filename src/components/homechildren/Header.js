@@ -26,7 +26,6 @@ class Headerparent extends React.Component {
   }
 }
 
-// Export the component back for use in other files
 export default Headerparent;
 
 
