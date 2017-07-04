@@ -1,16 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Highlight from 'react-highlight';
+import NameField from "./NameField";
+import LocationField from "./LocationField";
+import BioField from "./BioField";
+
+
+
 import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from './REI/riet.js';
 
 class UserProfile extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      location: 'San Diego, CA',
-      name : "Example text value",
-      textarea : `Iman is known for his great sense of humor. In fact, he has been acknowledged by comedy legends as possessing a sense of humor that is far superior to that of a normal plebeian. His jokes are considered by many to be timeless, reminiscent of the jokes curated by the likes of Gene Wilder and Richard Pryor. A great majority of people consider his comedic approach to be Eddie Murphy-esque, with his frequent use of social realism and profanity. Filling stadiums across the globe to max capacity, his stadium-filling shows produce laughs so loud that he's in the Guinness Book of World Records, having reached 145.2 decibels during his stop at Staples Center in 2017. 
-`,
+      select : {id: "1", text: "broccoli"},
+      selectOptions : [
+        {id: "1", text: "broccoli"},
+        {id: "2", text: "arugula"},
+        {id: "3", text: "leek"},
+        {id: "4", text: "radish"},
+        {id: "5", text: "watercress"},
+        {id: "6", text: "dandelion"}
+      ],
+      boolean : true,
+      number : 9000,
+      text : "Enter Name",
+      textarea : `Multiline example
+  text value`,
       date : Date.now(),
       tags: new Set(["Bergen", "Asmara", "Göteborg", "Newcastle", "Seattle"]),
       simulateXHR: false,
@@ -60,67 +76,33 @@ class UserProfile extends React.Component {
     return text + " ms";
   };
 
-  render = () => {
-    let xhrDelaySwitch = (this.state.simulateXHR) ? <li>XHR delay: <RIENumber value={this.state.XHRDelay} change={this.changeState} validate={this.isValidXHRDelay} propName="XHRDelay" className="editable-pill" format={this.formatMillisecondsAppend} /></li> : null;
-    return (
-      <div className="container">
-        <div className="row">
+    render() {
+        return (
+              
+              <div className="container">
+                <div className="row">
+                  <div className="col col-xs-12 col-sm-4">
+                    <img className="profileImg" src={this.state.imageSRC}/>
+                  </div>
 
-          <div className="col col-xs-12 col-sm-4">
+                  <div className="col col-xs-12 col-sm-8 profileInfo">
+                    
+                    <NameField />
 
-            <img className="profileImg" src={this.state.imageSRC}/>
+                    <LocationField />
 
-          </div>
+                    <hr />
 
-          <div className="col col-xs-12 col-sm-8">
+                    <h3 className="bioFieldHeader">About Me</h3>                      
+                    <BioField />
 
-            <h2 className="nameField">
-              <RIEInput
-                value={this.state.name}
-                change={this.virtualServerCallback}
-                propName="text"
-                className={this.state.highlight ? "editable" : ""}
-                classLoading="loading"
-                classInvalid="invalid"
-                isDisabled={this.state.isDisabled} />
-            </h2>
+                  </div>
 
-            <h4 className="locationField">
-              <RIEInput
-                value={this.state.location}
-                change={this.virtualServerCallback}
-                propName="text"
-                className={this.state.highlight ? "editable" : ""}
-                classLoading="loading"
-                classInvalid="invalid"
-                isDisabled={this.state.isDisabled} />
-            </h4>
+                </div>
+              </div>
 
-            <p className="bioField">
-              <RIETextArea
-                value={this.state.textarea}
-                change={this.virtualServerCallback}
-                propName="textarea"
-                className={this.state.highlight ? "editable" : ""}
-                validate={this.isStringAcceptable}
-                classLoading="loading"
-                classInvalid="invalid"
-                isDisabled={this.state.isDisabled} />
-            </p>
-
-
-
-          </div>
-
-
-
-
-
-        </div>
-      </div>
-    )
+    );
   };
 }
-
 export default UserProfile;
 

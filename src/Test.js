@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Highlight from 'react-highlight';
 import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from '../src/index.js';
 
-class Demo extends React.Component {
+class Test extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -84,16 +84,7 @@ class Demo extends React.Component {
           <li><i>select:</i> {JSON.stringify(this.state.select)}</li>
         </ul>
       </div>
-      <div className="fifty">
-        <h3>Options</h3>
-        <ul>
-        <li>Simulate XHR: <RIEToggle value={this.state.simulateXHR} change={this.changeState} propName="simulateXHR" textTrue="yes" textFalse="don't" className="editable-pill"/></li>
-        {xhrDelaySwitch}
-        <li>Highlight editable: <RIEToggle value={this.state.highlight} change={this.changeState} propName="highlight" textTrue="highlight" textFalse="don't" className="editable-pill" /></li>
-        <li><RIEToggle value={this.state.showSource} change={this.changeState} propName="showSource" textTrue="Source shown" textFalse="Source hidden" className="editable-pill"/></li>
-        <li><RIEToggle value={this.state.isDisabled} change={this.changeState} propName="isDisabled" textTrue="fields disabled" textFalse="fields not disabled" className="editable-pill" /></li>
-        </ul>
-      </div>
+      
     </div>
     <div className="content">
       <h3>Toggle</h3>
@@ -289,4 +280,4 @@ isDisabled={this.state.isDisabled} />`}
   };
 }
 
-export default Demo;
+export default Test;
