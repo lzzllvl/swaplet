@@ -46,8 +46,7 @@ class Headerparent extends React.Component {
   }
 }
 
-<<<<<<< Updated upstream
-=======
+
 //Nav Prototypes
 /*
 NavBar.propTypes = {
@@ -67,7 +66,7 @@ NavBar.defaultProps = {
 
 
 // Export the component back for use in other files
->>>>>>> Stashed changes
+
 export default Headerparent;
 
 

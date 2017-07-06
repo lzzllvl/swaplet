@@ -13,11 +13,19 @@ class Home extends React.Component {
     render() {
         return (
 
-        <div className="container">
-        	<Header/>
-        	<Static/>
-        	<Listings/>
-        </div>
+             <div className="section">
+                <div className="container">
+                <Header/>
+                    <div className="row" id="home">
+                        
+	                    
+	                    <Static/>
+	                    <Listings/>
+	         
+
+                    </div>
+                </div>
+            </div>
 
         );
     }
