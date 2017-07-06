@@ -17,18 +17,15 @@ class Listings extends React.Component {
 
 	render() {
 		return (
-			<div className="container">
-				<div className="row">
-					<div className="col-sm-10 col-sm-offest-1">
+			<div className="col-sm-6" id="listings">
+				<div className="listingsdiv row">
 
 					<Listingcard/>
 
-					</div>
 				</div>
 			</div>
 
 		);
-
 	}
 }
 
