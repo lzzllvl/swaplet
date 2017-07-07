@@ -1,12 +1,11 @@
-// NAME FIELD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Highlight from 'react-highlight';
 
-import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from './REI/riet.js';
+import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from '../REI/riet.js';
 
 
-class NameField extends React.Component {
+class BioField extends React.Component {
 	constructor(props){
 	    super(props);
 	    this.state = {
@@ -74,18 +73,19 @@ class NameField extends React.Component {
 
     render() {
         return (
-			<h2 className="nameField">
-				<RIEInput
-				value={this.state.text}
-				change={this.virtualServerCallback}
-				propName="text"
-				className={this.state.highlight ? "editable" : ""}
-				classLoading="loading"
-				classInvalid="invalid"
-				isDisabled={this.state.isDisabled} />
-			</h2>
+			<p className="bioField">
+				<RIETextArea
+					  value={this.state.textarea}
+					  change={this.virtualServerCallback}
+					  propName="textarea"
+					  className={this.state.highlight ? "editable" : ""}
+					  validate={this.isStringAcceptable}
+					  classLoading="loading"
+					  classInvalid="invalid"
+					  isDisabled={this.state.isDisabled} />
+			</p>		
         );
     }
 } 
 
-export default NameField;
+export default BioField;

@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Highlight from 'react-highlight';
 
-import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from './REI/riet.js';
+import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from '../REI/riet.js';
 
 
-class BioField extends React.Component {
+class LocationField extends React.Component {
 	constructor(props){
 	    super(props);
 	    this.state = {
@@ -20,7 +20,7 @@ class BioField extends React.Component {
 	      ],
 	      boolean : true,
 	      number : 9000,
-	      text : "Enter Name",
+	      text : "Enter Location",
 	      textarea : `Multiline example text value`,
 	      date : Date.now(),
 	      tags: new Set(["Bergen", "Asmara", "Göteborg", "Newcastle", "Seattle"]),
@@ -73,19 +73,18 @@ class BioField extends React.Component {
 
     render() {
         return (
-			<p className="bioField">
-				<RIETextArea
-					  value={this.state.textarea}
-					  change={this.virtualServerCallback}
-					  propName="textarea"
-					  className={this.state.highlight ? "editable" : ""}
-					  validate={this.isStringAcceptable}
-					  classLoading="loading"
-					  classInvalid="invalid"
-					  isDisabled={this.state.isDisabled} />
-			</p>		
+			<h3 className="locationField">
+				<RIEInput
+				value={this.state.text}
+				change={this.virtualServerCallback}
+				propName="text"
+				className={this.state.highlight ? "editable" : ""}
+				classLoading="loading"
+				classInvalid="invalid"
+				isDisabled={this.state.isDisabled} />
+			</h3>
         );
     }
 } 
 
-export default BioField;
+export default LocationField;
