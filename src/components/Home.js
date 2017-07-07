@@ -86,10 +86,10 @@ class Home extends React.Component {
     render() {
         return (
 
-             <div className="section">
-                <div className="container">
+             <div>
+                <div className="col-sm-12">
 	                <Header onClick={this.handleSubmit} onChange={this.handleChange}/>
-	                <div className="row" id="home">                       
+	                <div className="row col-sm-12" id="home">                       
 	                    
 	                    <Static onClick={this.increaseBedCount} onClick={this.decreaseBedCount} 
 	                    		onClick={this.increaseBathCount} onClick={this.decreaseBathCount}
@@ -99,7 +99,6 @@ class Home extends React.Component {
 
 	                </div>
                 </div>
-                <ImageUploadArea type="Profile"/>
             </div>
 
         );

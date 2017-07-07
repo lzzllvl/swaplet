@@ -24,7 +24,7 @@ class Headerparent extends React.Component {
     return (
 
 
-      <div className = "container" role="navigation">
+      <div className = "container col-sm-12" role="navigation">
         <div className="bar">
             	<Search onClick={this.props.handleSubmit} onChange={this.props.handleChange}/>
   		        <Rightnav/>

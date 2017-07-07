@@ -9,18 +9,18 @@ class Rightnav extends React.Component {
                 <ul className="nav navbar-nav navbar-right">
                     <li>
                         <a href="" target="_blank">
-                            <i className="material-icons">unarchive</i> Home
+                             Home
                         </a>
                     </li>
                     <li>
                         <a href="" target="_blank">
-                            <i className="material-icons">unarchive</i> Profile
+                             Profile
                         </a>
                     </li>
 
                     <li>
                         <a href="" target="_blank">
-                            <i className="material-icons">unarchive</i> Login
+                             Login
                         </a>
                     </li>
                 </ul>
