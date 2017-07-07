@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ImageUploadArea from './children/ImageUploadArea.js';
+import { addListingImage } from '../../utils/imageHelpers.js';
 
 
 
@@ -11,10 +12,17 @@ export default class AddListingForm extends Component {
         }; 
     }
 
+    uploadImage(imageData) {
+        addListingImage(imageData);
+    }
+
     render() {
         return (
             <div>
-                <ImageUploadArea type="listing" listing_id={}/> 
+                <ImageUploadArea 
+                    type="Listing" 
+                    reference_id={}
+                    upload={this.uploadImage}/> 
             </div>
         )
     } 
