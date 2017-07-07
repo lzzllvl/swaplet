@@ -1,12 +1,11 @@
-// NAME FIELD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Highlight from 'react-highlight';
 
-import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from './REI/riet.js';
+import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from '../REI/riet.js';
 
 
-class LocationField extends React.Component {
+class NameField extends React.Component {
 	constructor(props){
 	    super(props);
 	    this.state = {
@@ -21,7 +20,7 @@ class LocationField extends React.Component {
 	      ],
 	      boolean : true,
 	      number : 9000,
-	      text : "Enter Location",
+	      text : "Enter Name",
 	      textarea : `Multiline example text value`,
 	      date : Date.now(),
 	      tags: new Set(["Bergen", "Asmara", "Göteborg", "Newcastle", "Seattle"]),
@@ -74,7 +73,7 @@ class LocationField extends React.Component {
 
     render() {
         return (
-			<h3 className="locationField">
+			<h2 className="nameField">
 				<RIEInput
 				value={this.state.text}
 				change={this.virtualServerCallback}
@@ -83,9 +82,9 @@ class LocationField extends React.Component {
 				classLoading="loading"
 				classInvalid="invalid"
 				isDisabled={this.state.isDisabled} />
-			</h3>
+			</h2>
         );
     }
 } 
 
-export default LocationField;
+export default NameField;
