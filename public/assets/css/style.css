@@ -87,6 +87,12 @@
 	width:50%;
 }
 
+.staticChildren {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 

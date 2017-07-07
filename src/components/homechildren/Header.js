@@ -10,38 +10,27 @@ import Rightnav from './headerchildren/rightnav';
 
 class Headerparent extends React.Component {
 //Props
-  constructor(props) {
-    super(props);
-    this.search = this.searchUser.bind(this);
-  }
-  searchUser(username) {
-    console.log(username);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.search = this.searchUser.bind(this);
+  // }
+  // searchUser(username) {
+  //   console.log(username);
+  // }
+
 
   render() {
 
     return (
 
 
-      <div className="container" role="navigation">
+      <div className = "container" role="navigation">
         <div className="bar">
-          <div className="">
-            {this.props.title}
-          </div>
-          	<Search/>
-		    <Rightnav/>
-          </div>
+            	<Search onClick={this.props.handleSubmit} onChange={this.props.handleChange}/>
+  		        <Rightnav/>
+        </div>
       </div>
 
-
-
-      	/*<nav className="navbar navbar-transparent navbar-absolute">
-		    <div className="container-fluid">
-		    	<Search/>
-		     	<Rightnav/>
-		     </div>
-		</nav> 
-		*/
     );
   }
 }
@@ -64,8 +53,6 @@ NavBar.defaultProps = {
 };
 */
 
-
-// Export the component back for use in other files
 
 export default Headerparent;
 

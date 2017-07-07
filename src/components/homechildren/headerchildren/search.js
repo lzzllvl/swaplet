@@ -8,8 +8,8 @@ class Search extends React.Component {
 			// THIS IS THE SEARCH COMPONENT
 			<div className="search" id="search">
 
-					<button className="btn-sm btn-info" onClick={this.clickHandler}>Search{this.props.buttonTxt}</button>
-					<input type="text" class="form-control searchinput" placeholder="Search a City"/>
+					<button className="btn-sm btn-info" onClick={this.props.handleSubmit}>Search</button>
+					<input type="text" className="searchinput" value={this.state.value} onChange={this.handleChange} placeholder="Search a City"/>
 
 			</div>
 
@@ -19,15 +19,6 @@ class Search extends React.Component {
 
 
 			
-	          /*<div className="headerchilren">
-	            <form className="navbar-form">
-				  <div className="form-group label-floating">
-	                <input type="text" ref="searchBox" className="form-control" placeholder={this.props.hint} />
-	                <button className="btn btn-info" onClick={this.clickHandler}>{this.props.buttonTxt}</button>
-	              </div>
-	            </form>
-	          </div>
-			*/
 		);
 	}
 }
