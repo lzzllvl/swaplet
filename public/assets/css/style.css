@@ -19,7 +19,6 @@
   }
 }
 
-
 .no-flexbox {
   .bar {
     display: table;
@@ -40,11 +39,21 @@
   position: relative;
   top: 50%;
   margin-right: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .search {
  	margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 650px) {
