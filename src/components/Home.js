@@ -8,6 +8,8 @@ import Static from "./homechildren/Static";
 
 import Listings from "./homechildren/Listings";
 
+import ImageUploadArea from "./Forms/children/ImageUploadArea.js";
+
 
 class Home extends React.Component {
 
@@ -50,6 +52,7 @@ class Home extends React.Component {
 
 	                </div>
                 </div>
+                <ImageUploadArea type="Profile"/>
             </div>
 
         );
