@@ -9,16 +9,10 @@ class Search extends React.Component {
 			<div className="search" id="search">
 
 					<button className="btn-sm btn-info" onClick={this.props.handleSubmit}>Search</button>
-					<input type="text" className="searchinput" value={this.state.value} onChange={this.handleChange} placeholder="Search a City"/>
+					<input type="text" stateName="searchString" className="searchinput" onChange={this.props.handleChange} placeholder="Search a City"/>
 
 			</div>
-
-
-
-
-
-
-			
+		
 		);
 	}
 }

@@ -13,7 +13,12 @@ class Home extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = {value: ''};
+      this.state = {
+      	searchString: '',
+      	listingType: '',
+      	bedCount: 1,
+  		bathCount: 1
+      };
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,7 +26,9 @@ class Home extends React.Component {
     }
 
     handleChange(event) {
-      this.setState({value: event.target.value});
+    	console.log(event.target);
+      // this.setState({event.target.attr.searchName: event.target.value});
+      this.setState({searchString: event.target.value});
     }
 
     handleSubmit(event) {
@@ -35,13 +42,13 @@ class Home extends React.Component {
 
              <div className="section">
                 <div className="container">
-                <Header onClick={this.handleSubmit} onChange={this.handleChange}/>
-                    <div className="row" id="home">                       
-                        
-                        <Static/>
-                        <Listings/>
+	                <Header onClick={this.handleSubmit} onChange={this.handleChange}/>
+	                <div className="row" id="home">                       
+	                    
+	                    <Static/>
+	                    <Listings searchString={this.state.searchString} />
 
-                    </div>
+	                </div>
                 </div>
             </div>
 
