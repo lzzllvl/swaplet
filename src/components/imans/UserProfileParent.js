@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Highlight from 'react-highlight';
-import NameField from "./NameField";
-import LocationField from "./LocationField";
-import BioField from "./BioField";
 
+import UserProfileImage from "./UserProfileImage/UserProfileImage";
+import UserProfileInfoContainer from "./UserProfileInfo/UserProfileInfoContainer";
+import UPListingsContainer from "./UserProfileListings/UPListingsContainer";
 
-
-import {RIEInput, RIEToggle, RIETextArea, RIENumber, RIETags, RIESelect} from './REI/riet.js';
 
 class UserProfile extends React.Component {
   constructor(props){
@@ -59,7 +57,7 @@ class UserProfile extends React.Component {
   isStringEvenNumber = (string) => {
     var number = parseInt(string);
     if (isNaN(number) || !isFinite(number)) return false;
-    return number % 2 == 0;
+    return number % 2 === 0;
   };
 
   isValidXHRDelay = (text) => {
@@ -81,22 +79,12 @@ class UserProfile extends React.Component {
               
               <div className="container">
                 <div className="row">
-                  <div className="col col-xs-12 col-sm-4">
-                    <img className="profileImg" src={this.state.imageSRC}/>
-                  </div>
+                  
+                  <UserProfileImage />
 
-                  <div className="col col-xs-12 col-sm-8 profileInfo">
+                  <UserProfileInfoContainer />
                     
-                    <NameField />
-
-                    <LocationField />
-
-                    <hr />
-
-                    <h3 className="bioFieldHeader">About Me</h3>                      
-                    <BioField />
-
-                  </div>
+                  <UPListingsContainer />
 
                 </div>
               </div>

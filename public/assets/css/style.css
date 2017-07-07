@@ -4,9 +4,9 @@
  margin: 5% 10%;
 }
 
-*, *:before, *:after {
+/**, *:before, *:after {
   box-sizing: inherit;
-}
+}*/
 
 .bar {
   display: flex;
@@ -85,6 +85,12 @@
 
 #static#listings {
 	width:50%;
+}
+
+.staticChildren {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

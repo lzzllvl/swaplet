@@ -14,7 +14,7 @@ class Static extends React.Component {
         return (
 
         <div className="col-sm-6" id="static">
-            <div className="staticdiv row">
+            <div className="staticdiv">
                 <Filterbox/>
                 <Roombox/>
                 <Bathroombox/>

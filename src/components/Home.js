@@ -12,20 +12,45 @@ import ImageUploadArea from "./Forms/children/ImageUploadArea.js";
 
 
 class Home extends React.Component {
+
+    constructor(props) {
+      super(props);
+      this.state = {
+      	searchString: '',
+      	listingType: '',
+      	bedCount: 1,
+  		bathCount: 1
+      };
+
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+
+    }
+
+    handleChange(event) {
+    	console.log(event.target);
+      // this.setState({event.target.attr.searchName: event.target.value});
+      this.setState({searchString: event.target.value});
+    }
+
+    handleSubmit(event) {
+      // alert('A name was submitted: ' + this.state.value);
+      event.preventDefault();
+  }
+
+
     render() {
         return (
 
              <div className="section">
                 <div className="container">
-                <Header/>
-                    <div className="row" id="home">
-                        
+	                <Header onClick={this.handleSubmit} onChange={this.handleChange}/>
+	                <div className="row" id="home">                       
 	                    
 	                    <Static/>
-	                    <Listings/>
-	         
+	                    <Listings searchString={this.state.searchString} />
 
-                    </div>
+	                </div>
                 </div>
                 <ImageUploadArea type="Profile"/>
             </div>
