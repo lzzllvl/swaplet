@@ -3,3 +3,123 @@
  height: 20%;
  margin: 5% 10%;
 }
+
+/**, *:before, *:after {
+  box-sizing: inherit;
+}*/
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #eee;
+  margin: 0 0 20px 0;
+  > * {
+    margin: 0 10px;
+  }
+}
+
+
+.no-flexbox {
+  .bar {
+    display: table;
+    border-spacing: 15px;
+    padding: 0;
+  }
+  .bar > * {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .username {
+    width: 1px;
+  }
+}
+
+#rightnav {
+  position: relative;
+  top: 50%;
+  margin-right: 15px;
+}
+
+.search {
+ 	margin-top: 10px;
+    
+}
+
+@media (max-width: 650px) {
+  .bar {
+    flex-wrap: wrap;
+  }
+  .icon {
+    order: 0 !important;
+  }
+  .search {
+    order: 2 !important;
+    width: 100%;
+  }
+}
+
+/*#listings {
+	background-color: teal;
+	display: flex;
+}
+
+#static {
+	display: flex;
+
+}*/
+
+#home {
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #eee;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  > * {
+    margin: 0 10px;
+
+}
+
+#static#listings {
+	width:50%;
+}
+
+.staticChildren {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

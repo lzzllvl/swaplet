@@ -9,7 +9,7 @@ class Listingcard extends React.Component {
             // WE ONLY NEED ONE CARD COMPONENT FILE
             // REACT HAS THE MAP FUNCTION IN THE RENDER TO REUSE THIS COMPONENT FOR MULTIPLE LISTINGS
             // https://facebook.github.io/react/docs/lists-and-keys.html#basic-list-component
-            <div className="col-sm-4">
+            <div className="col-sm-12">
                 <div className="card-container">
                     <div className="card">
                      <div className="front">

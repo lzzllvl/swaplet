@@ -13,15 +13,18 @@ class Static extends React.Component {
     render() {
         return (
 
-        <div className="container">
-        	<Filterbox/>
-        	<Roombox/>
-        	<Bathroombox/>
-        	<Datebox/>
-        </div>
+        <div className="col-sm-6" id="static">
+            <div className="staticdiv">
+                <Filterbox/>
+                <Roombox/>
+                <Bathroombox/>
+                <Datebox/>
+            </div>
+        </div>        
 
         );
     }
 } 
 
 export default Static;
+
