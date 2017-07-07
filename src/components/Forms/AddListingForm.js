@@ -14,7 +14,7 @@ export default class AddListingForm extends Component {
     render() {
         return (
             <div>
-                <ImageUploadArea /> 
+                <ImageUploadArea type="listing" listing_id={}/> 
             </div>
         )
     } 

@@ -58,7 +58,8 @@ const apiHelpers = {
             body: body,
         }
         return axios.post('/api/newMessage', messagePackage);
-    }
+    },
+    
 }
 
 module.exports = apiHelpers;

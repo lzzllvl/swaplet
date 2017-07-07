@@ -9,7 +9,7 @@ class Search extends React.Component {
 			<div className="search" id="search">
 
 					<button className="btn-sm btn-info" onClick={this.clickHandler}>Search{this.props.buttonTxt}</button>
-					<input type="text" class="form-control searchinput" placeholder="Search a City"/>
+					<input type="text" className="form-control searchinput" placeholder="Search a City"/>
 
 			</div>
 
