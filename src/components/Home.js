@@ -21,16 +21,16 @@ class Home extends React.Component {
 		  listingType: '',
 		  bedCount: 1,
 		  bathCount: 1
-	}
+	    }
 
-	      this.handleChange = this.handleChange.bind(this);
-	      this.handleSubmit = this.handleSubmit.bind(this);
-	      this.increaseBedCount = this.increaseBedCount.bind(this);
-	      this.decreaseBedCount = this.decreaseBedCount.bind(this);
-	      this.increaseBathCount = this.increaseBathCount.bind(this);
-	      this.decreaseBathCount = this.decreaseBathCount.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.increaseBedCount = this.increaseBedCount.bind(this);
+        this.decreaseBedCount = this.decreaseBedCount.bind(this);
+        this.increaseBathCount = this.increaseBathCount.bind(this);
+        this.decreaseBathCount = this.decreaseBathCount.bind(this);
 
-}
+    }
 
     onUpdate (data) {
     	this.setState({ data })
