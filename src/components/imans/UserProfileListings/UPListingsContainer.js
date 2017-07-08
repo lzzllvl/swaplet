@@ -15,13 +15,15 @@ class UPListingsContainer extends React.Component {
         return (
         		
 
-				<div className="col col-xs-12">
+				<div className="container">
+				<div className="row">
 					<h2>Check Out My Listings</h2>
 
 					<IndividualListingContainer />
 
 
 					
+				</div>
 				</div>
 
     );
