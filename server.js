@@ -47,7 +47,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 //require the user controller. 
 
-let userController = require("./controllers/userController.js");
+
 
 app.use('/', router);
 

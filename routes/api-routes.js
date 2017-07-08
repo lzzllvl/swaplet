@@ -1,5 +1,6 @@
 const Listing = require('../models/Listing');
 const User = require('../models/User');
+const userController = require("../controllers/userController.js");
 
 module.exports = function (router) {
     //get by parameters - GET
@@ -65,7 +66,31 @@ module.exports = function (router) {
             })
     });
     
-    
+    router.post('/login', (req, res) => {
+        userController.authenticateUser(req.body.email, req.body.password)
+            .then((user)=> {
+                console.log(user);
+            })
+            .catch((err) => {
+                console.log(err);
+                res.json({"err": "Authentication Failed"})
+            });
+        res.end();
+    })
+
+    router.post('/signup', (req, res) => {
+        console.log(req.body);
+        userController.createUser(req.body)
+             
+            .then((result) => {
+                console.log(result);
+                res.end();
+            })
+            .catch((err) => {
+                console.log(err);
+                res.end();
+            })
+    });
     //edit a listing - PATCH
 
     //add a listing - POST

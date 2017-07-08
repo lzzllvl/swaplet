@@ -10,6 +10,8 @@ export default class SignUpForm extends Component {
         
         this.setProfileImageId = this.setProfileImageId.bind(this);
         this.updateImage = this.updateImage.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
 
         this.state = {
             firstName: "",
@@ -27,6 +29,7 @@ export default class SignUpForm extends Component {
 
     setProfileImageId(imageId) {
         let { image_id } = imageId;
+        console.log(image_id);
         this.setState({ profileImageId: image_id }); 
     }
 
@@ -87,7 +90,7 @@ export default class SignUpForm extends Component {
                             value={this.state.firstName}
                             type="text"
                             className="form-control text-center"
-                            id="email"
+                            id="firstName"
                             onChange={this.handleChange}
                             required
                         />
@@ -99,7 +102,7 @@ export default class SignUpForm extends Component {
                             value={this.state.lastName}
                             type="text"
                             className="form-control text-center"
-                            id="email"
+                            id="lastName"
                             onChange={this.handleChange}
                             required
                         />
@@ -136,17 +139,12 @@ export default class SignUpForm extends Component {
                             value={this.state.bio}
                             type="text"
                             className="form-control text-center"
-                            id="email"
+                            id="bio"
                             onChange={this.handleChange}
                             required
                         />
                         <br/>
-                        <ImageUploadArea 
-                            type="Profile" 
-                            reference_id="new" 
-                            addImageLink={this.setProfileImageId}/>
-
-                        <br />
+                        
                         <button
                             className="btn btn-primary"
                             type="submit"
@@ -155,6 +153,12 @@ export default class SignUpForm extends Component {
                         </button>
                     </div>
                 </form>
+                <ImageUploadArea 
+                            type="Profile" 
+                            reference_id="new" 
+                            addImageLink={this.setProfileImageId}/>
+
+                <br />
             </div>
         )
     } 

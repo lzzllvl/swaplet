@@ -8,7 +8,9 @@ import Static from "./homechildren/Static";
 
 import Listings from "./homechildren/Listings";
 
-import ImageUploadArea from "./Forms/children/ImageUploadArea.js";
+import LoginForm from "./Forms/LoginForm.js";
+
+import SignUpForm from "./Forms/SignUpForm.js";
 
 
 class Home extends React.Component {
@@ -99,6 +101,8 @@ class Home extends React.Component {
 
 	                </div>
                 </div>
+                <LoginForm />
+                <SignUpForm />
             </div>
 
         );
