@@ -22,6 +22,7 @@
     "passport-local": "^1.0.0",
     "react": "^15.6.1",
     "react-addons-shallow-compare": "^15.6.0",
+    "react-bootstrap-carousel": "^1.2.0",
     "react-date-range": "^0.9.4",
     "react-dates": "^12.2.4",
     "react-dom": "^15.6.1",

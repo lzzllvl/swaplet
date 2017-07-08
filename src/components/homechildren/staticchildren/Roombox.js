@@ -4,7 +4,7 @@ class Roombox extends React.Component {
     render() {
         return  (
 
-    	    <div className="row staticChildren">
+    	    <div className="row staticChildren text-center">
     	    	<h4 className="rbc-title col s12 col-xs-12">Rooms</h4>
 				<div className="rbc-numberbox-container col s12 col-xs-12">
 				   <div className="rbc-label"></div>
