@@ -10,19 +10,19 @@ import Datebox from "./staticchildren/Datebox";
 
 
 class Static extends React.Component {
+    update () {
+      // Send value of 'myInput' to parent onUpdate method.
+      this.props.onUpdate(this.refs.myInput.getDOMNode().value)
+    }
+
     render() {
         return (
 
-        <div className="col-sm-6" id="static">
+        <div className="col-sm-6 staticdiv" id="static">
             <div className="staticdiv">
                 <Filterbox/>
-                <Roombox onClick={this.props.increaseBedCount} onClick={this.props.decreaseBedCount}
-                onChange={this.props.bedTotal} onChange={this.props.handleChange}
-                />
-                <Bathroombox onClick={this.props.increaseBathCount} onClick={this.props.decreaseBathCount}
-                onChange={this.props.bathTotal} onChange={this.props.handleChange}
-
-                />
+                <Roombox onChange={this.props.handleChange}/>
+                <Bathroombox onChange={this.props.handleChange}/>
                 <Datebox/>
             </div>
         </div>        

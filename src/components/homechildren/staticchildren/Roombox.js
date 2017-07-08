@@ -9,11 +9,11 @@ class Roombox extends React.Component {
 				<div className="rbc-numberbox-container col s12 col-xs-12">
 				   <div className="rbc-label"></div>
 				    <div className="rbc-numberbox-btn-container">
-				      <button onClick={this.props.decreaseBedCount} className="btn rbc-btn rbc-btn-active">
+				      <button onChange={this.props.handleChange} className="btn rbc-btn rbc-btn-active">
 				        <span className="fa fa-minus rbc-icon"></span>
 				      </button>
-				      <span onChange={this.props.bedTotal} className="roomCount">1</span>
-				      <button onClick={this.props.increaseBedCount}  className="btn rbc-btn rbc-btn-active">
+				      <span onChange={this.props.handleChange} className="roomCount">1</span>
+				      <button onChange={this.props.handleChange}  className="btn rbc-btn rbc-btn-active">
 				        <span className="fa fa-plus rbc-icon"></span>
 				      </button>
 				    </div>
