@@ -22,9 +22,10 @@ class UserProfile extends React.Component {
               <UserProfileImage />
 
               <UserProfileInfoContainer />
-                
-              <UPListingsContainer />
 
+            </div>
+            <div className="row">
+              <UPListingsContainer />
             </div>
           </div>
 

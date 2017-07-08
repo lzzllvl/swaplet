@@ -16,15 +16,13 @@ class IndividualListingContainer extends React.Component {
         return (
 
 
-				<div className="container">
-					<div className="row">
+				<div className="col col-xs-12">
 
 					<IndividualListingImage />
 					<IndividualListingTitle />
 					<IndividualListingButton />
 
 
-					</div>
 				</div>
 
     );
