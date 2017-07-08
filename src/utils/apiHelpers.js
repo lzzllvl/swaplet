@@ -40,7 +40,7 @@ const apiHelpers = {
     },
 
     addNewListing: function(newListing, user_id) {
-        let postdata = {
+        let postData = {
             listingData: newListing,
             user_id: user_id
         };

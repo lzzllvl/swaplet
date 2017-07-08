@@ -10,7 +10,7 @@ export default class AddListingForm extends Component {
         this.state = {
             address: '',
             nightlyRate: 0.00,
-            sublettable: true,
+            sublettable: false,
             swappable: false,
             amenities: [],
             prefferedSwapLocations: [],
@@ -23,7 +23,7 @@ export default class AddListingForm extends Component {
         }; 
 
         this.uploadImage = this.uploadImage.bind(this);
-        this.addListingeImageId = this.addListingeImageId.bind(this);
+        this.addListingImageId = this.addListingImageId.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
@@ -37,7 +37,8 @@ export default class AddListingForm extends Component {
     addListingImageId(imageId) {
         let { image_id } = imageId;
         image_id = image_id.split('/')[3].split("#")[0].split('.')[0]; //retrieving the id from the url
-        let newImageList = this.state.imageLinks.push(image_id);
+        let newImageList = this.state.imageLinks;
+        newImageList.push(image_id);
         this.setState({ imageLinks: newImageList }); 
     }
 
@@ -70,6 +71,7 @@ export default class AddListingForm extends Component {
             default:
                 newState = this.state;
         }
+        console.log(this.state);
         this.setState(newState);
     }
 
@@ -108,7 +110,7 @@ export default class AddListingForm extends Component {
                         </h4>
                         <input
                             value={this.state.sublettable}
-                            type="radio"
+                            type="checkbox"
                             className="form-control text-center"
                             id="sublettable"
                             onChange={this.handleChange}
@@ -120,7 +122,7 @@ export default class AddListingForm extends Component {
                         </h4>
                         <input
                             value={this.state.swappable}
-                            type="radio"
+                            type="checkbox"
                             className="form-control text-center"
                             id="swappable"
                             onChange={this.handleChange}

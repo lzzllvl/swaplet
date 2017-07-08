@@ -2,7 +2,7 @@ import React from 'react';
 
 class Roombox extends React.Component {
 	plus() {
-	  let rc = this.refs.roomCount.getDOMNode();
+	  let rc = this.refs.roomCount.getAttribute();
 	  rc.value = Number.parseInt(rc.value) + 1;
 	  this.props.onUpdate(rc.value);
 	}

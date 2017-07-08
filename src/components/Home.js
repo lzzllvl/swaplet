@@ -12,6 +12,8 @@ import LoginForm from "./Forms/LoginForm.js";
 
 import SignUpForm from "./Forms/SignUpForm.js";
 
+import AddListingForm from './Forms/AddListingForm.js';
+
 
 class Home extends React.Component {
 	constructor (props) {
@@ -87,7 +89,9 @@ class Home extends React.Component {
 			          bedCount={this.state.bedCount}
 			          bathCount={this.state.bathCount}/>
 		      </div>
+          <AddListingForm user_id={null}/>
 		    </div>
+        
 	    )
 	}
 }
