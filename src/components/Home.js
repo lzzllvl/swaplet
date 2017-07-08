@@ -84,14 +84,18 @@ class Home extends React.Component {
 
 	 render () {
 	    return (
-	      <div>
-	        <Static onUpdate={this.onUpdate.bind(this)}/>
-	        <Listings
-	          searchString={this.state.searchString}
-	          listingType={this.state.listingType}
-	          bedCount={this.state.bedCount}
-	          bathCount={this.state.bathCount}/>
-	      </div>
+
+	      	<div className="container">
+            	<Header onClick={this.handleSubmit} onChange={this.handleChange}/>
+            	<div className="row" id="home">   
+			        <Static onUpdate={this.onUpdate.bind(this)}/>
+			        <Listings
+			          searchString={this.state.searchString}
+			          listingType={this.state.listingType}
+			          bedCount={this.state.bedCount}
+			          bathCount={this.state.bathCount}/>
+		      </div>
+		    </div>
 	    )
 	}
 }
