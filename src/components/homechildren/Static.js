@@ -10,10 +10,6 @@ import Datebox from "./staticchildren/Datebox";
 
 
 class Static extends React.Component {
-    // update () {
-    //   // Send value of 'myInput' to parent onUpdate method.
-    //   this.props.onUpdate(this.refs.myInput.getDOMNode().value)
-    // }
 
     render() {
         return (
@@ -32,4 +28,3 @@ class Static extends React.Component {
 } 
 
 export default Static;
-
