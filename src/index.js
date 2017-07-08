@@ -10,5 +10,5 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 
-ReactDOM.render(<ListingParentContainer />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
