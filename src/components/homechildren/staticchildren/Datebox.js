@@ -1,18 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import { DateRange } from 'react-date-range';
 
 // react-dates go here
 class Datebox extends React.Component {
 
-handleSelect(range){
+    handleSelect(range){
 		console.log(range);
 		// An object with two keys,
 		// 'startDate' and 'endDate' which are Momentjs objects.
 	}
 
-render() {
+    render() {
         return (
         	    <div className="row staticChildren text-center">
                    <h4 className="rbc-title col s12">Date Range</h4>
