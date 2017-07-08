@@ -87,9 +87,9 @@ class Home extends React.Component {
         return (
 
              <div>
-                <div className="col-sm-12">
+                <div>
 	                <Header onClick={this.handleSubmit} onChange={this.handleChange}/>
-	                <div className="row col-sm-12" id="home">                       
+	                <div className="row" id="home">                       
 	                    
 	                    <Static onClick={this.increaseBedCount} onClick={this.decreaseBedCount} 
 	                    		onClick={this.increaseBathCount} onClick={this.decreaseBathCount}
