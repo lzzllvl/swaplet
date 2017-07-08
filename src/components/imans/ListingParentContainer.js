@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import ListingInfoContainer from "./ListingInfo/ListingInfoContainer";
-import UserProfileInfoContainer from "./UserProfileInfo/UserProfileInfoContainer";
-import UPListingsContainer from "./UserProfileListings/UPListingsContainer";
-
+import ListingImageCarouselContainer from "./ListingImage/ListingImageCarouselContainer";
 
 class ListingParentContainer extends React.Component {
   constructor(props){
@@ -23,7 +21,6 @@ class ListingParentContainer extends React.Component {
 
                   <ListingInfoContainer />
                     
-                  <ListingButtonsContainer />
 
                 </div>
               </div>

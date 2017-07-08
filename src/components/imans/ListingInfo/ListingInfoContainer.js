@@ -1,13 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
-import ListingImageCarouselContainer from "../ListingImage/ListingImageCarouselContainer";
-import ListingTitle from "./ListingTitle";
-import ListingLocation from "./ListingLocation";
-import ListingInfo from "./ListingInfo";
-import ListingAvailability from "./ListingAvailability";
-import ListingButtonsContainer from "../ListingButtons/ListingButtonsContainer";
+import ListingInfoLeft from "./ListingInfoLeft";
+import ListingInfoRight from "./ListingInfoRight";
 
 class ListingInfoContainer extends React.Component {
 	constructor(props){
@@ -20,17 +15,9 @@ class ListingInfoContainer extends React.Component {
               
 			<div className="col col-xs-12">
 				
-				<ListingImageCarouselContainer />
-
-				<ListingTitle />
+				<ListingInfoLeft />
 				
-				<ListingLocation />
-				
-				<ListingInfo />
-				
-				<ListingAvailability />
-				
-				<ListingButtonsContainer />
+				<ListingInfoRight />
 
 	        </div>
 
