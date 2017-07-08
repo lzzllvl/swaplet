@@ -59,7 +59,7 @@ passport.deserializeUser((user, done) => {
     User.findOne({
         _id: user._id
     }).exec((err, user) => {
-        return(err, user)
+        done(err, user)
     })
 })
 

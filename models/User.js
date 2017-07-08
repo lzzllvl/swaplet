@@ -21,7 +21,7 @@ const UserSchema = new Schema({
         required: true
     },
 
-    profileImageLink: {
+    profileImageId: {
         type: String,
     }, 
 

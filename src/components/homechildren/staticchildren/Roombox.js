@@ -12,7 +12,7 @@ class Roombox extends React.Component {
 				      <button onClick={this.props.decreaseBedCount} className="btn rbc-btn rbc-btn-active">
 				        <span className="fa fa-minus rbc-icon"></span>
 				      </button>
-				      <span onChange={this.props.bedTotal} stateName="bedTotal" className="roomCount">1</span>
+				      <span onChange={this.props.bedTotal} className="roomCount">1</span>
 				      <button onClick={this.props.increaseBedCount}  className="btn rbc-btn rbc-btn-active">
 				        <span className="fa fa-plus rbc-icon"></span>
 				      </button>

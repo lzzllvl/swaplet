@@ -29,6 +29,7 @@ export default class SignUpForm extends Component {
 
     setProfileImageId(imageId) {
         let { image_id } = imageId;
+        image_id = image_id.split('/')[3].split("#")[0].split('.')[0]; //retrieving the id from the url
         console.log(image_id);
         this.setState({ profileImageId: image_id }); 
     }
