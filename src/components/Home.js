@@ -16,84 +16,38 @@ import AddListingForm from './Forms/AddListingForm.js';
 
 
 class Home extends React.Component {
-	constructor (props) {
-		super(props)
-		this.state = {
-		  searchString: '',
-		  listingType: '',
-		  bedCount: 1,
-		  bathCount: 1
-	    }
+    constructor (props) {
+        super(props)
+        this.state = {
+          searchString: '',
+          listingType: '',
+          bedCount: 1,
+          bathCount: 1
+    }
   }
 
-  onUpdate (data) {
-    	// this.setState({ data })
-    console.log(data);
+  onUpdate (name, value) {
+    this.setState({[name] : value});
+    console.log(name + " = " + value);
   }
 
-   //  	console.log(event.target);
-   //    // this.setState({event.target.attr.searchName: event.target.value});
-   //    this.setState({searchString: event.target.value});
-   //  }
+     render () {
+        return (
 
-   //  handleSubmit(event) {
-   //    // alert('A name was submitted: ' + this.state.value);
-   //    event.preventDefault();
-  	// }
-  	// //FOR BEDCOUNT AND ROOMCOUNT BUTTONS
+              <div className="container">
 
-   //  componentWillMount() {
-   //  	this.recalculateBedTotal();
-   //  }
-
-   //  increaseBedCount() {
-   //      this.setState({bedCount: this.state.bedCount + 1}, this.recalculateBedTotal);
-   //  }
-
-   //  decreaseBedCount() {
-   //      let newCount = this.state.bedCount > 0 ? this.state.bedCount - 1 : 0;
-   //      this.setState({bedCount: newCount}, this.recalculateBedTotal);
-   //  }
-
-   //  recalculateBedTotal() {
-   //      this.setState({bedTotal: this.state.bedCount + this.props.bedTotal});
-   //  }
-
-   //  // componentWillMount() {
-   // 	//  	this.recalculateBathTotal();
-   //  // }
-
-   //  increaseBathCount() {
-   //      this.setState({bedCount: this.state.bathCount + 1}, this.recalculateBathTotal);
-   //  }
-
-   //  decreaseBathCount() {
-   //      let newCount = this.state.bathCount > 0 ? this.state.bathCount - 1 : 0;
-   //      this.setState({bathCount: newCount}, this.recalculateBathTotal);
-   //  }
-
-   //  recalculateBathTotal() {
-   //      this.setState({bathTotal: this.state.bathCount + this.props.bathTotal});
-   //  }
-
-	 render () {
-	    return (
-
-	      	<div className="container">
-            	<Header onClick={this.handleSubmit} onChange={this.handleChange}/>
-            	<div className="row" id="home">   
-			        <Static onUpdate={this.onUpdate.bind(this)}/>
-			        <Listings
-			          searchString={this.state.searchString}
-			          listingType={this.state.listingType}
-			          bedCount={this.state.bedCount}
-			          bathCount={this.state.bathCount}/>
-		      </div>
-          <AddListingForm user_id={null}/>
-		    </div>
-        
-	    )
-	}
+              	<Header onClick={this.handleSubmit} onChange={this.handleChange}/>
+	              <div className="row" id="home">   
+	                    <Static onUpdate={this.onUpdate.bind(this)}/>
+	                    <Listings
+	                      searchString={this.state.searchString}
+	                      listingType={this.state.listingType}
+	                      bedCount={this.state.bedCount}
+	                      bathCount={this.state.bathCount}/>
+	              </div>
+            </div>
+        )
+    }
 }
 
 export default Home;
