@@ -22,76 +22,72 @@ class Home extends React.Component {
 		  bedCount: 1,
 		  bathCount: 1
 	    }
+  }
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.increaseBedCount = this.increaseBedCount.bind(this);
-        this.decreaseBedCount = this.decreaseBedCount.bind(this);
-        this.increaseBathCount = this.increaseBathCount.bind(this);
-        this.decreaseBathCount = this.decreaseBathCount.bind(this);
+  onUpdate (data) {
+    	// this.setState({ data })
+    console.log(data);
+  }
 
-    }
+   //  	console.log(event.target);
+   //    // this.setState({event.target.attr.searchName: event.target.value});
+   //    this.setState({searchString: event.target.value});
+   //  }
 
-    onUpdate (data) {
-    	this.setState({ data })
-   }
+   //  handleSubmit(event) {
+   //    // alert('A name was submitted: ' + this.state.value);
+   //    event.preventDefault();
+  	// }
+  	// //FOR BEDCOUNT AND ROOMCOUNT BUTTONS
 
-    handleChange(event) {
-    	console.log(event.target);
-      // this.setState({event.target.attr.searchName: event.target.value});
-      this.setState({searchString: event.target.value});
-    }
+   //  componentWillMount() {
+   //  	this.recalculateBedTotal();
+   //  }
 
-    handleSubmit(event) {
-      // alert('A name was submitted: ' + this.state.value);
-      event.preventDefault();
-  	}
-  	//FOR BEDCOUNT AND ROOMCOUNT BUTTONS
+   //  increaseBedCount() {
+   //      this.setState({bedCount: this.state.bedCount + 1}, this.recalculateBedTotal);
+   //  }
 
-    componentWillMount() {
-    	this.recalculateBedTotal();
-    }
+   //  decreaseBedCount() {
+   //      let newCount = this.state.bedCount > 0 ? this.state.bedCount - 1 : 0;
+   //      this.setState({bedCount: newCount}, this.recalculateBedTotal);
+   //  }
 
-    increaseBedCount() {
-        this.setState({bedCount: this.state.bedCount + 1}, this.recalculateBedTotal);
-    }
+   //  recalculateBedTotal() {
+   //      this.setState({bedTotal: this.state.bedCount + this.props.bedTotal});
+   //  }
 
-    decreaseBedCount() {
-        let newCount = this.state.bedCount > 0 ? this.state.bedCount - 1 : 0;
-        this.setState({bedCount: newCount}, this.recalculateBedTotal);
-    }
+   //  // componentWillMount() {
+   // 	//  	this.recalculateBathTotal();
+   //  // }
 
-    recalculateBedTotal() {
-        this.setState({bedTotal: this.state.bedCount + this.props.bedTotal});
-    }
+   //  increaseBathCount() {
+   //      this.setState({bedCount: this.state.bathCount + 1}, this.recalculateBathTotal);
+   //  }
 
-    // componentWillMount() {
-   	//  	this.recalculateBathTotal();
-    // }
+   //  decreaseBathCount() {
+   //      let newCount = this.state.bathCount > 0 ? this.state.bathCount - 1 : 0;
+   //      this.setState({bathCount: newCount}, this.recalculateBathTotal);
+   //  }
 
-    increaseBathCount() {
-        this.setState({bedCount: this.state.bathCount + 1}, this.recalculateBathTotal);
-    }
-
-    decreaseBathCount() {
-        let newCount = this.state.bathCount > 0 ? this.state.bathCount - 1 : 0;
-        this.setState({bathCount: newCount}, this.recalculateBathTotal);
-    }
-
-    recalculateBathTotal() {
-        this.setState({bathTotal: this.state.bathCount + this.props.bathTotal});
-    }
+   //  recalculateBathTotal() {
+   //      this.setState({bathTotal: this.state.bathCount + this.props.bathTotal});
+   //  }
 
 	 render () {
 	    return (
-	      <div>
-	        <Static onUpdate={this.onUpdate.bind(this)}/>
-	        <Listings
-	          searchString={this.state.searchString}
-	          listingType={this.state.listingType}
-	          bedCount={this.state.bedCount}
-	          bathCount={this.state.bathCount}/>
-	      </div>
+
+	      	<div className="container">
+            	<Header onClick={this.handleSubmit} onChange={this.handleChange}/>
+            	<div className="row" id="home">   
+			        <Static onUpdate={this.onUpdate.bind(this)}/>
+			        <Listings
+			          searchString={this.state.searchString}
+			          listingType={this.state.listingType}
+			          bedCount={this.state.bedCount}
+			          bathCount={this.state.bathCount}/>
+		      </div>
+		    </div>
 	    )
 	}
 }
