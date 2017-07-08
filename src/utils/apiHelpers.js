@@ -39,12 +39,9 @@ const apiHelpers = {
         return axios.patch('/api/editlisting', patchData);
     },
 
-    addNewListing: function(newListing, user_id) {
-        let postData = {
-            listingData: newListing,
-            user_id: user_id
-        };
-        return axios.post('/api/addlisting/', postData);
+    addNewListing: function(newListing) {
+    
+        return axios.post('/api/addlisting/', newListing);
     },
 
     getMessagesForUser: function(user_id) {

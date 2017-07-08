@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 
 const PORT = process.env.PORT || 8080;
 var dbhost = PORT == 8080
-           ? 'localhost/swaplet-test1'
+           ? 'localhost/swaplet-test2'
            : null; //switch with heroku db when needed
 
 //models and ODM

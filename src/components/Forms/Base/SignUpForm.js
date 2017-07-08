@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import ImageUploadArea from './children/ImageUploadArea.js';
-import { sendNewAccount } from '../../utils/userHelpers.js';
-import { addProfileImage } from '../../utils/imageHelpers.js';
+import { addProfileImage } from '../../../utils/imageHelpers.js';
 
 
 export default class SignUpForm extends Component {
     constructor() {
         super();
         
-        this.setProfileImageId = this.setProfileImageId.bind(this);
+        // this.setProfileImageId = this.setProfileImageId.bind(this);
         this.updateImage = this.updateImage.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,12 +25,6 @@ export default class SignUpForm extends Component {
         addProfileImage(imageData);
     } 
 
-    setProfileImageId(imageId) {
-        let { image_id } = imageId;
-        image_id = image_id.split('/')[3].split("#")[0].split('.')[0]; //retrieving the id from the url
-        console.log(image_id);
-        this.setState({ profileImageId: image_id }); 
-    }
 
     handleSubmit(event) {
         event.preventDefault();
@@ -41,18 +33,16 @@ export default class SignUpForm extends Component {
             lastName, 
             email,
             password,
-            bio,
-            profileImageId
+            bio
         } = this.state;
         let submission = Object.assign({}, {
             firstName,
             lastName, 
             email,
             password,
-            bio,
-            profileImageId
+            bio
         });
-        sendNewAccount(submission);
+        this.props.sendProfile(submission);
     }
 
     handleChange(event) {
@@ -126,7 +116,7 @@ export default class SignUpForm extends Component {
                         </h4>
                         <input
                             value={this.state.password}
-                            type="text"
+                            type="password"
                             className="form-control text-center"
                             id="password"
                             onChange={this.handleChange}
@@ -154,12 +144,6 @@ export default class SignUpForm extends Component {
                         </button>
                     </div>
                 </form>
-                <ImageUploadArea 
-                            type="Profile" 
-                            reference_id="new" 
-                            addImageLink={this.setProfileImageId}/>
-
-                <br />
             </div>
         )
     } 

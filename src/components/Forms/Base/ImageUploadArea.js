@@ -35,7 +35,15 @@ export default class ImageUploadArea extends Component {
             image_id = nextImageId;
             let { reference_id, type } = this.props;
             let data = { reference_id, type, image_id };
+            
             this.props.addImageLink(data);
+            let interval = setInterval(() => {
+                document.getElementById('image_id').value === '' 
+                    ? clearInterval(interval)
+                    : this.forceUpdate(() => {
+                        document.getElementById('image_id').value = '';
+                    });
+            }, 100); 
         }
     }
 
@@ -55,7 +63,7 @@ export default class ImageUploadArea extends Component {
 
     render() {
         let cloudinary_cors = `/cloudinary_cors.html`;
-        let uploadTag = { __html: cloudinary.uploader.image_upload_tag('image_id', { callback: cloudinary_cors })};
+        let uploadTag = { __html: cloudinary.uploader.image_upload_tag('image_id', { callback: cloudinary_cors})};
         return (
             <div>
                 <form id="imageForm" onChange={this.handleSubmit}>

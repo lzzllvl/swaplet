@@ -8,21 +8,18 @@ import Static from "./homechildren/Static";
 
 import Listings from "./homechildren/Listings";
 
-import LoginForm from "./Forms/LoginForm.js";
+import AddListingFormWrapper from "./Forms/AddListingFormWrapper.js";
 
-import SignUpForm from "./Forms/SignUpForm.js";
-
-import AddListingForm from './Forms/AddListingForm.js';
 
 
 class Home extends React.Component {
-    constructor (props) {
-        super(props)
-        this.state = {
-          searchString: '',
-          listingType: '',
-          bedCount: 1,
-          bathCount: 1
+  constructor (props) {
+    super(props)
+    this.state = {
+      searchString: '',
+      listingType: '',
+      bedCount: 1,
+      bathCount: 1
     }
   }
 
@@ -31,23 +28,24 @@ class Home extends React.Component {
     console.log(name + " = " + value);
   }
 
-     render () {
-        return (
+  render () {
+    return (
 
-              <div className="container">
+          <div className="container">
 
-              	<Header onClick={this.handleSubmit} onChange={this.handleChange}/>
-	              <div className="row" id="home">   
-	                    <Static onUpdate={this.onUpdate.bind(this)}/>
-	                    <Listings
-	                      searchString={this.state.searchString}
-	                      listingType={this.state.listingType}
-	                      bedCount={this.state.bedCount}
-	                      bathCount={this.state.bathCount}/>
-	              </div>
+            <Header onClick={this.handleSubmit} onChange={this.handleChange}/>
+            <div className="row" id="home">   
+                  <Static onUpdate={this.onUpdate.bind(this)}/>
+                  <Listings
+                    searchString={this.state.searchString}
+                    listingType={this.state.listingType}
+                    bedCount={this.state.bedCount}
+                    bathCount={this.state.bathCount}/>
             </div>
-        )
-    }
+            <AddListingFormWrapper user_id={1}/>
+        </div>
+    )
+}
 }
 
 export default Home;

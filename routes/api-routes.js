@@ -94,6 +94,16 @@ module.exports = function (router) {
     //edit a listing - PATCH
 
     //add a listing - POST
+    router.post('/api/addlisting', (req, res) => {
+        console.log(req.body);
+
+        let newListingData = Object.assign({ owner: req.body.user_id }, req.body.listingData );
+        let newListing = new Listing(newListingData); 
+        newListing.save((error, result) => {
+            if(error) console.log(error);
+            res.json(result);
+        })
+    })
 
     //send a message -  POST
    

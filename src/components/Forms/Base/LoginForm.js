@@ -62,7 +62,7 @@ export default class LoginForm extends Component {
                         </h4>
                         <input
                             value={this.state.password}
-                            type="text"
+                            type="password"
                             className="form-control text-center"
                             id="password"
                             onChange={this.handleChange}

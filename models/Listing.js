@@ -11,28 +11,8 @@ const ListingSchema = new Schema({
     },
 
     address: {
-        streetNumber: {
-            type: Number,
-            required: true,
-        }, 
-        streetName: {
-            type: String,
-            required: true
-        },
-        city: {
-            type: String,
-            required: true   
-        },
-
-        state: {
-            type: String,
-            required: true
-        },
-
-        zipCode: {
-            type: Number,
-            required: true
-        }
+       type: String,
+       required: true
     },
 
     nightlyRate: {

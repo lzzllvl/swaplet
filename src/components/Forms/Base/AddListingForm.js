@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import ImageUploadArea from './children/ImageUploadArea.js';
-import { addListingImage } from '../../utils/imageHelpers.js';
-import { addNewListing } from '../../utils/apiHelpers.js';
+import { addListingImage } from '../../../utils/imageHelpers.js';
+
 
 //need to pass in the owner mongo _id as a prop
 export default class AddListingForm extends Component {
@@ -10,8 +9,8 @@ export default class AddListingForm extends Component {
         this.state = {
             address: '',
             nightlyRate: 0.00,
-            sublettable: false,
-            swappable: false,
+            sublettable: true,
+            swappable: true,
             amenities: [],
             prefferedSwapLocations: [],
             specifications: {
@@ -23,7 +22,7 @@ export default class AddListingForm extends Component {
         }; 
 
         this.uploadImage = this.uploadImage.bind(this);
-        this.addListingImageId = this.addListingImageId.bind(this);
+      //  this.addListingImageId = this.addListingImageId.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
@@ -34,17 +33,17 @@ export default class AddListingForm extends Component {
         addListingImage(imageData);
     }
 
-    addListingImageId(imageId) {
-        let { image_id } = imageId;
-        image_id = image_id.split('/')[3].split("#")[0].split('.')[0]; //retrieving the id from the url
-        let newImageList = this.state.imageLinks;
-        newImageList.push(image_id);
-        this.setState({ imageLinks: newImageList }); 
-    }
+    // addListingImageId(imageId) {
+    //     let { image_id } = imageId;
+    //     image_id = image_id.split('/')[3].split("#")[0].split('.')[0]; //retrieving the id from the url
+    //     let newImageList = this.state.imageLinks;
+    //     newImageList.push(image_id);
+    //     this.setState({ imageLinks: newImageList }); 
+    // }
 
     handleSubmit(event) {
         event.preventDefault();
-        addNewListing(this.state, this.props.user_id)
+        this.props.sendListing(this.state)
     }
 
     handleChange(event) {
@@ -63,10 +62,14 @@ export default class AddListingForm extends Component {
                 newState.swappable = !this.state.swappable;
                 break;
             case 'amenities': 
-                newState.sublettable = !this.state.sublettable;
+                newState.amenities = event.target.value.split(',');
                 break;
             case 'prefferedSwapLocations':
+                newState.prefferedSwapLocations = event.target.value.split(',');
+                break;
             case 'specifications': 
+                newState.specifications = event.target.value.split(',');
+                break;
 
             default:
                 newState = this.state;
@@ -114,7 +117,7 @@ export default class AddListingForm extends Component {
                             className="form-control text-center"
                             id="sublettable"
                             onChange={this.handleChange}
-                            required
+                            
                         />
                         <br />
                         <h4 className="">
@@ -126,7 +129,7 @@ export default class AddListingForm extends Component {
                             className="form-control text-center"
                             id="swappable"
                             onChange={this.handleChange}
-                            required
+                            
                         />
                         <br />
                         <h4 className="">
@@ -153,18 +156,7 @@ export default class AddListingForm extends Component {
                             required
                         />
                         <br/>
-                         <h4 className="">
-                            <strong>Specifications</strong>
-                        </h4>
-                        <input
-                            value={this.state.specifications}
-                            type="text"
-                            className="form-control text-center"
-                            id="specifications"
-                            onChange={this.handleChange}
-                            required
-                        />
-                        <br/>
+                      
 
                         <button
                             className="btn btn-primary"
@@ -174,10 +166,6 @@ export default class AddListingForm extends Component {
                         </button>
                     </div>
                 </form>
-                <ImageUploadArea 
-                    type="Listing" 
-                    reference_id='new'
-                    addImageLink={this.addListingImageId}/> 
             </div>
         )
     } 
