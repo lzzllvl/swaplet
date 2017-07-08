@@ -16,8 +16,13 @@ class Static extends React.Component {
         <div className="col-sm-6" id="static">
             <div className="staticdiv">
                 <Filterbox/>
-                <Roombox/>
-                <Bathroombox/>
+                <Roombox onClick={this.props.increaseBedCount} onClick={this.props.decreaseBedCount}
+                onChange={this.props.bedTotal} onChange={this.props.handleChange}
+                />
+                <Bathroombox onClick={this.props.increaseBathCount} onClick={this.props.decreaseBathCount}
+                onChange={this.props.bathTotal} onChange={this.props.handleChange}
+
+                />
                 <Datebox/>
             </div>
         </div>        
