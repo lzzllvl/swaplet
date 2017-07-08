@@ -8,6 +8,7 @@ export default class AddListingForm extends Component {
     constructor() {
         super();
         this.state = {
+            profileListingId: '',
 
         }; 
     }
@@ -16,13 +17,18 @@ export default class AddListingForm extends Component {
         addListingImage(imageData);
     }
 
+    setListingeImageId(imageId) {
+        let { image_id } = imageId;
+        this.setState({ listingImageId: image_id }); 
+    }
+
     render() {
         return (
             <div>
                 <ImageUploadArea 
                     type="Listing" 
-                    reference_id={}
-                    upload={this.uploadImage}/> 
+                    reference_id='new'
+                    addImageLink={this.setListingeImageId}/> 
             </div>
         )
     } 
