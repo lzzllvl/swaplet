@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Datebox from './Datebox';
 
-class SubletButton extends React.Component {
+
+class ListingAvailability extends React.Component {
 	constructor(props){
 		super(props);
 		
@@ -11,13 +13,13 @@ class SubletButton extends React.Component {
     render() {
         return (
               
-			<div className="">
+			<div className="col col-xs-4">
 				
-				
+				<Datebox />
 
 	        </div>
 
     );
   };
 }
-export default SubletButton;
+export default ListingAvailability;

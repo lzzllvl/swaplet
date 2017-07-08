@@ -11,7 +11,7 @@ class SwapButton extends React.Component {
     render() {
         return (
               
-			<div className="">
+			<div className="col col-xs-6">
 				
 				
 

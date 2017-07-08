@@ -14,7 +14,7 @@ class ListingImageCarouselContainer extends React.Component {
     render() {
         return (
               
-			<div className="">
+			<div className="col col-xs-12">
 				
 				<ListingImageCarousel />
 

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-class ListingAvailability extends React.Component {
+class SubletButton extends React.Component {
 	constructor(props){
 		super(props);
 		
@@ -11,7 +11,7 @@ class ListingAvailability extends React.Component {
     render() {
         return (
               
-			<div className="">
+			<div className="col col-xs-6">
 				
 				
 
@@ -20,4 +20,4 @@ class ListingAvailability extends React.Component {
     );
   };
 }
-export default ListingAvailability;
+export default SubletButton;
