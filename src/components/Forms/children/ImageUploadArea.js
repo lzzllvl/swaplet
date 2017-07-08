@@ -35,14 +35,13 @@ export default class ImageUploadArea extends Component {
             image_id = nextImageId;
             let { reference_id, type } = this.props;
             let data = { reference_id, type, image_id };
-            this.props.upload(data);
-
+            this.props.addImageLink(data);
         }
     }
 
     handleSubmit(event) {
         let checker = document.getElementById('image_id').value;
-        //blame orlando for this
+        //mmmm what a solution
         let interval = setInterval(() => {
             let checkee = document.getElementById('image_id').value;
             if(checker !== checkee) {
@@ -62,7 +61,7 @@ export default class ImageUploadArea extends Component {
                 <form id="imageForm" onChange={this.handleSubmit}>
                     <h4>Upload a {this.props.type} Image</h4>
                     <span dangerouslySetInnerHTML={ uploadTag }/>
-                    <input  type='text' id='image_id' value={this.state.image_id} name='image_id'/>
+                    <input  type='hidden' id='image_id' value={this.state.image_id} name='image_id'/>
                 </form>
             </div>
         )
