@@ -8,21 +8,6 @@ class Roombox extends React.Component {
 	    }
   	}
 
-<<<<<<< HEAD
-  plus() {
-    this.state.bedCount += 1;
-    console.log('Increase Bed Count: ' + this.state.bedCount);
-      this.props.onUpdate('bedCount', this.state.bedCount);
-  }
-  
-  minus() {
-    if (this.state.bedCount > 1) {
-        this.state.bedCount -= 1;
-      console.log('Decrease Bed Count: ' + this.state.bedCount);
-      this.props.onUpdate('bedCount', this.state.bedCount);
-    }
-  }
-=======
     plus() {
 	    this.state.bedCount += 1;
 	    console.log('Increase Bed Count: ' + this.state.bedCount);
@@ -57,7 +42,6 @@ class Roombox extends React.Component {
             </div>
         );
     }
->>>>>>> master
 
   render() {
     return (

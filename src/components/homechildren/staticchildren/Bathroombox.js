@@ -1,28 +1,6 @@
 import React from 'react';
 
 class Bathroombox extends React.Component {
-<<<<<<< HEAD
-	render() {
-		return (
-			<div className="row staticChildren text-center ">
-				<h4 className="rbc-title col s12 col-xs-12">Bathrooms</h4>
-				<div className="rbc-numberbox-container col s12 col-xs-12">
-					<div className="rbc-label"></div>
-					<div className="rbc-numberbox-btn-container staticButton">
-						<button className="btn rbc-btn rbc-btn-active">
-							<span className="fa fa-minus rbc-icon"></span>
-						</button>
-						<span className="rbc-numberbox-number">1</span>
-						<button className="btn rbc-btn rbc-btn-active">
-							<span className="fa fa-plus rbc-icon"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-
-		);
-	}
-=======
 	constructor (props) {
 	    super(props)
 	    this.state = {
@@ -65,7 +43,6 @@ class Bathroombox extends React.Component {
         );
     }
 
->>>>>>> master
 } 
 
 export default Bathroombox;
