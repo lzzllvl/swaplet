@@ -10,5 +10,9 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 
+<<<<<<< Updated upstream
 ReactDOM.render(<App />, document.getElementById('root'));
+=======
+ReactDOM.render(<UserProfile />, document.getElementById('root'));
+>>>>>>> Stashed changes
 registerServiceWorker();
