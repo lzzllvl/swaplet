@@ -14,28 +14,27 @@ import SignUpForm from "./Forms/SignUpForm.js";
 
 
 class Home extends React.Component {
+	constructor (props) {
+		super(props)
+		this.state = {
+		  searchString: '',
+		  listingType: '',
+		  bedCount: 1,
+		  bathCount: 1
+	}
 
-    constructor(props) {
-      super(props);
-      this.state = {
-      	searchString: '',
-      	listingType: '',
-      	bedCount: 1,
-  		bathCount: 1,
-  		//totals
-  		bedTotal: 0,
-  		bathTotal: 0
-      };
+	      this.handleChange = this.handleChange.bind(this);
+	      this.handleSubmit = this.handleSubmit.bind(this);
+	      this.increaseBedCount = this.increaseBedCount.bind(this);
+	      this.decreaseBedCount = this.decreaseBedCount.bind(this);
+	      this.increaseBathCount = this.increaseBathCount.bind(this);
+	      this.decreaseBathCount = this.decreaseBathCount.bind(this);
 
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.increaseBedCount = this.increaseBedCount.bind(this);
-      this.decreaseBedCount = this.decreaseBedCount.bind(this);
-      this.increaseBathCount = this.increaseBathCount.bind(this);
-      this.decreaseBathCount = this.decreaseBathCount.bind(this);
+}
 
-
-	    }
+	    onUpdate (data) {
+	    	this.setState({ data })
+	   }
 
 	    handleChange(event) {
 	    	console.log(event.target);
@@ -50,7 +49,7 @@ class Home extends React.Component {
 	  	//FOR BEDCOUNT AND ROOMCOUNT BUTTONS
 
         componentWillMount() {
-        this.recalculateBedTotal();
+        	this.recalculateBedTotal();
         }
 
         increaseBedCount() {
@@ -66,9 +65,9 @@ class Home extends React.Component {
             this.setState({bedTotal: this.state.bedCount + this.props.bedTotal});
         }
 
-        componentWillMount() {
-        this.recalculateBathTotal();
-        }
+        // componentWillMount() {
+       	//  	this.recalculateBathTotal();
+        // }
 
         increaseBathCount() {
             this.setState({bedCount: this.state.bathCount + 1}, this.recalculateBathTotal);
@@ -84,6 +83,7 @@ class Home extends React.Component {
         }
 
 
+<<<<<<< Updated upstream
 
     render() {
         return (
@@ -108,5 +108,20 @@ class Home extends React.Component {
         );
     }
 } 
+=======
+		 render () {
+		    return (
+		      <div>
+		        <Static onUpdate={this.onUpdate.bind(this)}/>
+		        <Listings
+		          searchString={this.state.searchString}
+		          listingType={this.state.listingType}
+		          bedCount={this.state.bedCount}
+		          bathCount={this.state.bathCount}/>
+		      </div>
+		    )
+		}
+}
+>>>>>>> Stashed changes
 
 export default Home;

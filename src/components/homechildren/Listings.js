@@ -11,18 +11,13 @@ import Listingcard from "./listingschildren/Listingcard";
 
 class Listings extends React.Component {
 
-	componentDidMount() {
-		
-	}
-
 	render() {
 		return (
 			<div className="col-sm-6" id="listings">
-				<div className="listingsdiv row">
-
-					<Listingcard/>
-
-				</div>
+		        <div>Search String: <strong>{this.props.searchString}</strong></div>
+		        <div>Listing Type: <strong>{this.props.listingType}</strong></div>
+		        <div>Bed Count: <strong>{this.props.bedCount}</strong></div>
+		        <div>Bath Count: <strong>{this.props.bathCount}</strong></div>
 			</div>
 
 		);

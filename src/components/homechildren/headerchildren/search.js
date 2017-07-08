@@ -7,7 +7,6 @@ class Search extends React.Component {
 		return (
 			// THIS IS THE SEARCH COMPONENT
 			<div className="search col-sm-4" id="search">
-
 					<div className="logo">Swaplet</div>
 					<div>
 						<input type="text" className="searchinput input btn" onChange={this.props.handleChange} placeholder="Destination, City, Address"/>
