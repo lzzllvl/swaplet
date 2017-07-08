@@ -12,8 +12,10 @@ handleSelect(range){
 
 render() {
         return (
-        	    <div className="row staticChildren">
+        	    <div className="row staticChildren text-center">
+                   <h4 className="rbc-title col s12">Date Range</h4>
                    <DateRange
+                        calendars={1}
                         onInit={this.handleSelect}
                         onChange={this.handleSelect}
 				    />

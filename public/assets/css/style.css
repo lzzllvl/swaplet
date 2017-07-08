@@ -1,7 +1,6 @@
 .staticChildren {
- width: 90%;
- height: 20%;
- margin: 5% 10%;
+ width: 68%;
+ margin-top: 10%;
 }
 
 /**, *:before, *:after {
@@ -41,6 +40,11 @@
   margin-right: 15px;
   display: flex;
   align-items: center;
+}
+
+.staticButton {
+    display: flex;
+    justify-content: space-around;
 }
 
 .search {
