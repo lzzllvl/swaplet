@@ -33,7 +33,7 @@ class Bathroombox extends React.Component {
 	                      <button onClick={this.minus.bind(this)} className="btn rbc-btn rbc-btn-active">
 			              <span className="fa fa-minus rbc-icon"></span>
 			              </button>
-			              <span class="rbc-numberbox-number">{this.state.bathCount}</span>
+			              <span className="rbc-numberbox-number">{this.state.bathCount}</span>
 			              <button onClick={this.plus.bind(this)}  className="btn rbc-btn rbc-btn-active">
 			              <span className="fa fa-plus rbc-icon"></span>
 			            </button>

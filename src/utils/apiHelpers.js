@@ -40,7 +40,6 @@ const apiHelpers = {
     },
 
     addNewListing: function(newListing) {
-    
         return axios.post('/api/addlisting/', newListing);
     },
 

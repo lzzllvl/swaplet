@@ -70,12 +70,12 @@ module.exports = function (router) {
         userController.authenticateUser(req.body.email, req.body.password)
             .then((user)=> {
                 console.log(user);
+                res.json(user._id);
             })
             .catch((err) => {
                 console.log(err);
                 res.json({"err": "Authentication Failed"})
             });
-        res.end();
     })
 
     router.post('/signup', (req, res) => {
@@ -84,11 +84,11 @@ module.exports = function (router) {
              
             .then((result) => {
                 console.log(result);
-                res.end();
+                res.json(result._id);
             })
             .catch((err) => {
                 console.log(err);
-                res.end();
+                res.json({"err": err})
             })
     });
     //edit a listing - PATCH

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { sendLogin } from '../../utils/userHelpers.js';
+import { sendLogin } from '../../../utils/userHelpers.js';
 
 
 
@@ -36,7 +36,9 @@ export default class LoginForm extends Component {
         event.preventDefault();
         let { email, password } = this.state;
         let userData = Object.assign({}, { email, password });
-        return sendLogin(userData); 
+        sendLogin(userData).then((response) => {
+            console.log(response);
+        }); 
     }
 
 

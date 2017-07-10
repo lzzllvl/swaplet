@@ -17,15 +17,12 @@ export default class ImageUploadArea extends Component {
     }
 
     componentDidMount() {
-        document.getElementById('imageForm').addEventListener("change", (event) => {
-            //console.log(document.getElementById("image_id"));
-            this.handleSubmit(event);
-        })
+        document.getElementById('imageForm').addEventListener("change", this.handleSubmit.bind(this))
     }
 
     componentWillUnmount() {
         //clearing event listener to prevent leakage
-        document.getElementById('imageForm').removeEventListener("change");
+        document.getElementById('imageForm').removeEventListener("change", this.handleSubmit.bind(this));
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -37,13 +34,7 @@ export default class ImageUploadArea extends Component {
             let data = { reference_id, type, image_id };
             
             this.props.addImageLink(data);
-            let interval = setInterval(() => {
-                document.getElementById('image_id').value === '' 
-                    ? clearInterval(interval)
-                    : this.forceUpdate(() => {
-                        document.getElementById('image_id').value = '';
-                    });
-            }, 100); 
+            
         }
     }
 
@@ -58,15 +49,15 @@ export default class ImageUploadArea extends Component {
                 })
                 clearInterval(interval);
             }
-        }, 50) 
+        }, 5000);
     }
-
+    
     render() {
         let cloudinary_cors = `/cloudinary_cors.html`;
         let uploadTag = { __html: cloudinary.uploader.image_upload_tag('image_id', { callback: cloudinary_cors})};
         return (
             <div>
-                <form id="imageForm" onChange={this.handleSubmit}>
+                <form id="imageForm" onSubmit={this.handleSubmit}>
                     <h4>Upload a {this.props.type} Image</h4>
                     <span dangerouslySetInnerHTML={ uploadTag }/>
                     <input  type='hidden' id='image_id' value={this.state.image_id} name='image_id'/>

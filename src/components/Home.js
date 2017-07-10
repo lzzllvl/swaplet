@@ -8,7 +8,6 @@ import Static from "./homechildren/Static";
 
 import Listings from "./homechildren/Listings";
 
-import AddListingFormWrapper from "./Forms/AddListingFormWrapper.js";
 
 
 
@@ -42,7 +41,6 @@ class Home extends React.Component {
                     bedCount={this.state.bedCount}
                     bathCount={this.state.bathCount}/>
             </div>
-            <AddListingFormWrapper user_id={1}/>
         </div>
     )
 }
